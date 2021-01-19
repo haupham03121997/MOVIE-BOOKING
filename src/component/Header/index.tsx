@@ -1,13 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
+import ModalLogin from '../ModalSignIn/ModalSignIn'
 const ModalExample = React.memo((props: any) => {
   const {
     className,
     toogle,
     modal
   } = props;
+ 
   return (
     <div>
       <Modal isOpen={modal} toggle={toogle} className={className}>
@@ -28,6 +29,8 @@ function Header() {
   const toogle = () => {
     setModal(!modal)
   }
+  const history = useHistory();
+
   return (
     <section className="header">
       <ModalExample toogle={toogle} modal={modal} />
@@ -56,25 +59,20 @@ function Header() {
             </li>
           </ul>
           <div className="header__profile">
-            {/* <div className="header__profile__left">
-              <img src="./images/profile.jpg" alt="profile" />
-              <span className="ml-1">DT Thúy Uyên</span>
-              <div className="logOut">
-                Đăng Xuất
-              </div>
-            </div> */}
-            <div className="header__profile__left" onClick={toogle}>
+    
+        
+            <div className="header__profile__left" onClick={() => history.push('/login')}>
               <img src="./images/avatar.png" alt="profile" />
               <span className="ml-1 mt-2">Đăng Nhập</span>
             </div>
-            <div className="header__profile__right">
+            <div className="header__profile__right" >
               {/* <i className="fa fa-map-marker"></i> */}
               <span>Đăng ký</span>
             </div>
           </div>
         </div>
       </nav>
-
+      <ModalLogin modal={modal} />
     </section>
   )
 }
