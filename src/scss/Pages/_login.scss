@@ -1,0 +1,61 @@
+.section-login{
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #11274A;
+    opacity: 0.9;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    .close{
+      cursor: pointer;
+    }
+    .logo{
+     
+     margin: 50px 0;
+      img{
+        width: 160px;
+        
+      }
+    }
+    .signin--message{
+        font-size: 10px;
+        font-weight: 500;
+    }
+   form{
+    input{
+      display: block;
+      margin: 20px auto;
+      width: 90%;
+      height: 35px;
+      border-radius: 4px;
+      padding: 0 10px;
+      // color: #D8402D;
+      border: none;
+      font-size: 13px;
+      font-weight: 800;
+      &:focus{
+        outline: none;
+        box-shadow: 0 0 8px 0  #D8402D;
+      }
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #D8402D;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-bottom: 30px;
+    }
+   }
+  .go-signin{
+      span{
+        color: #D8402D;
+        cursor: pointer;
+      }
+   }
+}
