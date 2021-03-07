@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
 import AuthLogin from './Reducer/Auth';
-import GetAllMovieAction from './Reducer/getListMovie'
+import {GetListMovieReducer} from './Reducer/getListMovie';
+import {getAllCenimaSystemReducer} from './Reducer/getAllCinemaSystem'
 const rootReducer = combineReducers({
     AuthLogin,
-    GetAllMovieAction,
+    GetListMovieReducer,
+    getAllCenimaSystemReducer
 })
 export default rootReducer;

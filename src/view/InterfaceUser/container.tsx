@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from './Carousel';
-import ListMovie from './ListMovie';
+import Content from './Content/Content';
 import HomeTools from './HomeTools';
 import ReactNotification from 'react-notifications-component'
  function container() {
@@ -8,7 +8,7 @@ import ReactNotification from 'react-notifications-component'
     <div>
        <Carousel />
        <HomeTools />
-       <ListMovie />
+       <Content />
        <ReactNotification />
     </div>
   )

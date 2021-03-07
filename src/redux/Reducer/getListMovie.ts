@@ -1,17 +1,7 @@
+import {Movie} from '../../utils/interface'
 
-interface ArrayListMovie  {
- maPhim: boolean;
- tenPhim:string;
- biDanh:string;
- trailer:string;
- hinhAnh:string;
- moTa:string;
- maNhom:string;
- ngayKhoiChieu:string;
- danhGia: boolean;
-}
 interface InitialState {
-  listMovie: Array<ArrayListMovie>;
+  listMovie: Array<Movie>;
   loading : boolean;
   error : boolean;
 }
@@ -21,13 +11,12 @@ const initialState :InitialState  = {
   error : false
 }
 
-const GetListMovieReducer = (state = initialState , action : any)=>{
-  console.log("action" , action);
-  
+export const GetListMovieReducer  = (state = initialState , action : any)=>{  
+
     switch (action.type) {
-      case "GET_MOVIE_SUCCESS": {
+      case "GET_ALL_MOVIE_SUCCESS": {
         return{
-          ...state , listMovie : action.payload.data  , loading : false , error : false
+          ...state , listMovie : action.payload , loading : false , error : false
         }
       }
       default:
@@ -36,4 +25,3 @@ const GetListMovieReducer = (state = initialState , action : any)=>{
        }
     }
 }
-export default GetListMovieReducer;
