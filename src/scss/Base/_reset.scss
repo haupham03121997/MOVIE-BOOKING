@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
+  color: #333;
+  font-weight: 500;
 
 }
 body,
@@ -13,6 +15,9 @@ html {
 ol,
 ul {
   list-style: none;
+}
+a{
+  text-decoration: none;
 }
 article,
 aside,

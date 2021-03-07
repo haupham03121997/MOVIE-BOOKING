@@ -1,0 +1,19 @@
+.section-register{
+  @extend .section-login;
+ .logo-register{
+  margin: 20px 0;
+  img{
+    width: 160px;
+    
+  }
+  .register__message{
+    font-size: 18px;
+    font-weight: 500;
+    color: red;
+    text-transform: uppercase;
+  }
+  .select_register{
+    display: block !important;
+  }
+ }
+}
