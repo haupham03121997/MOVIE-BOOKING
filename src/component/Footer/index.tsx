@@ -1,4 +1,5 @@
 import React from 'react'
+
 function Footer() {
   return (
     <section className="footer">
@@ -10,7 +11,7 @@ function Footer() {
                 <h4>TIX</h4>
                 <p className="footer__item-title mb-0">
                   FAQ
-               </p>
+                </p>
                 <p className="footer__item-title mb-0">Brand Guidelines</p>
               </div>
             </div>
@@ -19,7 +20,7 @@ function Footer() {
                 <h4> &nbsp;</h4>
                 <p className="footer__item-title mb-0">
                   Thỏa thuận sử dụng
-            </p>
+                </p>
                 <p className="footer__item-title mb-0">Chính sách bảo mật</p>
               </div>
             </div>
@@ -28,7 +29,7 @@ function Footer() {
                 <h4> ĐỐI TÁC</h4>
                 <div className="row">
                   <div className="col-12 pl-0">
-                     <img src="./images/bhd.png" alt="bhd"/>
+                    <img src="./images/bhd.png" alt="bhd"/>
                     <img src="./images/bhd.png" alt="bhd"/>
                     <img src="./images/galaxy.png" alt="galaxy"/>
                     <img src="./images/lotte.png" alt="lotte"/>
@@ -37,7 +38,7 @@ function Footer() {
                 </div>
                 <div className="row  mt-3">
                   <div className="col-12 pl-0">
-                  <img src="./images/bhd.png" alt="bhd"/>
+                    <img src="./images/bhd.png" alt="bhd"/>
                     <img src="./images/bhd.png" alt="bhd"/>
                     <img src="./images/galaxy.png" alt="galaxy"/>
                     <img src="./images/lotte.png" alt="lotte"/>
@@ -47,7 +48,7 @@ function Footer() {
                 </div>
                 <div className="row  mt-3">
                   <div className="col-12 pl-0">
-                  <img src="./images/bhd.png" alt="bhd"/>
+                    <img src="./images/bhd.png" alt="bhd"/>
                     <img src="./images/bhd.png" alt="bhd"/>
                     <img src="./images/galaxy.png" alt="galaxy"/>
                     <img src="./images/lotte.png" alt="lotte"/>
@@ -56,7 +57,7 @@ function Footer() {
                 </div>
                 <div className="row mt-3">
                   <div className="col-12 pl-0">
-                  <img src="./images/bhd.png" alt="bhd"/>
+                    <img src="./images/bhd.png" alt="bhd"/>
                     <img src="./images/bhd.png" alt="bhd"/>
                     <img src="./images/galaxy.png" alt="galaxy"/>
                     <img src="./images/lotte.png" alt="lotte"/>
@@ -69,16 +70,16 @@ function Footer() {
               <h4>Mobile App</h4>
               
               <p className="footer__item-title mb-0">
-                  <i className="fab fa-apple mr-2" />
-                  <i className="fab fa-android" />
-                             </p>
+                <i className="fab fa-apple mr-2" />
+                <i className="fab fa-android" />
+              </p>
             </div>
             <div className="col-2 footer__top-item">
               <h4>Mobile App</h4>
               <p className="footer__item-title mb-0">
               
-                  <i className="fab fa-apple mr-2" />
-                  <i className="fab fa-android" />
+                <i className="fab fa-apple mr-2" />
+                <i className="fab fa-android" />
               
               </p>
             </div>
@@ -109,4 +110,5 @@ function Footer() {
 
   )
 }
+
 export default Footer;

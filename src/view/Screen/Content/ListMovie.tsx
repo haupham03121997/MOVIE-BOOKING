@@ -2,18 +2,20 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllMovieAction } from '../../../redux/Action/getAllMovieAction';
 import { Movie } from '../../../utils/interface';
-import ListMovieItem from './ListMovieItem';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-export default function ListMovie() {
+import { ListMovieItem } from './ListMovieItem';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+function ListMovie() {
   const dispatch = useDispatch();
+
   React.useEffect(() => {
     dispatch(getAllMovieAction())
-    //eslint-disable-next-line
-  }, [dispatch])
+  }, [])
+
   const { listMovie } = useSelector((state: any) => state.GetListMovieReducer);
-  var settings = {
+  const settings = {
     infinite: true,
     nav: true,
     speed: 500,
@@ -21,9 +23,9 @@ export default function ListMovie() {
     slidesPerRow: 4,
     slidesToScroll: 1,
     autoplaySpeed: 1000,
-    className: "center",
+    className: 'center',
     centerMode: true,
-    centerPadding: "0px",
+    centerPadding: '0px',
     responsive: [
       {
         breakpoint: 600,
@@ -55,10 +57,9 @@ export default function ListMovie() {
     <Slider {...settings}>
       {listMovie && listMovie.map((movie: Movie) => {
         return (
-
           <div className="item-phim__container">
             <div className="item-phim__container__content">
-              <ListMovieItem tenPhim={movie.tenPhim} hinhAnh={movie.hinhAnh} biDanh={movie.biDanh} />
+              <ListMovieItem movie={movie}  />
             </div>
           </div>
         )
@@ -67,3 +68,5 @@ export default function ListMovie() {
 
   )
 }
+
+export default React.memo(ListMovie)

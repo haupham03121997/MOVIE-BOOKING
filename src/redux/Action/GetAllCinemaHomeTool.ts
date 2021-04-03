@@ -1,6 +1,6 @@
-import apiServices from "../../apiServices/apiServices";
-import { Dispatch } from "redux";
-import { GET_ALL_CENIMA_HOMETOOL_SUCCESS, GET_ALL_CINEMA_DAY } from "../Constant/type";
+import apiServices from '../../apiServices/apiServices';
+import { Dispatch } from 'redux';
+import { GET_ALL_CENIMA_HOMETOOL_SUCCESS, GET_ALL_CINEMA_DAY } from '../Constant/type';
 export const getAllCinameHOmeTolAction = (value : string) => {
   return (dispatch: Dispatch) => {
     apiServices.CinemaHomeTool(value).then((response) => {         

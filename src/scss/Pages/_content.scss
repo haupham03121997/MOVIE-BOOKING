@@ -5,46 +5,67 @@
     margin: auto;
     .slick-slider {
       position: relative;
-      .slick-prev{
+      .slick-prev {
         width: 60px;
         height: 60px;
         position: absolute;
         top: 47%;
-        left: -8% ;
-        background-image: url('./image/back-session.png');
+        left: -8%;
+        background-image: url("./image/back-session.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-       
-        &::before{
+
+        &::before {
           display: none;
         }
       }
-      .slick-next{
+      .slick-next {
         width: 60px;
         height: 60px;
         position: absolute;
         top: 46%;
-        right: -8% ;
-        background-image: url('./image/next-session.png');
+        right: -8%;
+        background-image: url("./image/next-session.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-       
-        &::before{
+
+        &::before {
           display: none;
         }
       }
     }
-   
 
     .slick-center {
       overflow: hidden;
     }
+  
+    
     .item-phim {
       &__container {
         padding: 20px;
-
+        .nameFilm-orange {
+          @include Btn($orange, $white, $fs-5, 0, 4px);
+          font-weight: 800;
+          padding: 5px 8px;
+        }
+        .minFilm {
+          @include Text($fs-6, $buttonDark, $fw-4, 0);
+        }
+        .nameFilm-green {
+          @include Btn($green, $white, $fs-5, 0, 4px);
+          font-weight: 800;
+          padding: 5px 10px;
+        }.nameFilm {
+          @include Text($fs-5, $colorDark, $fw-2, 0);
+          min-height: 35px;
+          // .nameFilm-orange {
+          //   @include Btn($orange, $white, $fs-5, 0, 4px);
+          //   font-weight: 800;
+          //   padding: 2px 8px;
+          // }
+        }
         &__content {
           cursor: pointer;
           min-height: 400px !important;
@@ -60,23 +81,8 @@
             border-radius: 4px;
           }
           &__detail {
-            .nameFilm {
-              @include Text($fs-5, $colorDark, $fw-2, 0);
-              min-height: 42px;
-            }
-            .nameFilm-green {
-              @include Btn($green, $white, $fs-5, 0, 4px);
-              font-weight: 800;
-              padding: 2px 10px;
-            }
-            .nameFilm-orange {
-              @include Btn($orange, $white, $fs-5, 0, 4px);
-              font-weight: 800;
-              padding: 2px 8px;
-            }
-            .minFilm {
-              @include Text($fs-6, $buttonDark, $fw-4, 0);
-            }
+            margin-top: 5px;
+            
           }
           .showHover {
             display: none;
@@ -116,44 +122,19 @@
             top: 35%;
             left: 50%;
             transform: translateX(-50%);
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             line-height: 45px;
             text-align: center;
-            border: 1px solid white;
+            border: 1.5px solid white;
             border-radius: 50%;
             z-index: 2;
             cursor: pointer;
-          }
-          .avgPont {
-            // text-align: center;
-            color: red;
-            font-size: $fs-8;
-            min-width: 50px;
-            background-color: rgba(12, 27, 54, 0.8);
-            border: 1px solid #1f2e46;
-            border-radius: 2px;
-            min-height: 50px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 5;
-            &__min {
-              @include Text($fs-3, $white, $fw-1, 0);
-              padding: 0;
-              margin: 0;
-            }
-            .avgPoint__icon {
-              text-align: center;
-              img {
-                display: inline-block;
-                width: 8px;
-              }
-              img:last-child {
-                width: 12px;
-              }
+            i{
+              color:#fff;
             }
           }
+         
         }
 
         &:hover {
@@ -172,5 +153,9 @@
         }
       }
     }
+  }
+  .back-news{
+    height: 100px;
+    background-color: red;
   }
 }

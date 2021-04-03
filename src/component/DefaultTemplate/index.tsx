@@ -6,9 +6,10 @@ function DefaultTemplate(props : any) {
   return (
     <>
       <Header />
-        {props.children}
+      {props.children}
       <Footer />
     </>
   )
 }
+
 export default DefaultTemplate;

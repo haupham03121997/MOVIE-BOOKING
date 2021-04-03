@@ -11,6 +11,7 @@ interface ArrayItem {
     altText : string;
     caption : string;
 }
+
 const items: ArrayItem[] = [
   {
     src: '/images/carousel-1.png',
@@ -29,20 +30,23 @@ const items: ArrayItem[] = [
   }
 ];
 
-function Slider(props: any) {
+function Slider() {
   const [activeIndex, setActiveIndex] = React.useState<number>(0);
   const [animating, setAnimating] = React.useState<boolean>(false);
   const next = () => {
     if (animating) return;
+
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+
     setActiveIndex(nextIndex);
   }
   const previous = () => {
     if (animating) return;
+
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+
     setActiveIndex(nextIndex);
   }
-
   const goToIndex = (newIndex: number) => {
     if (animating) return;
     setActiveIndex(newIndex);
@@ -58,6 +62,7 @@ function Slider(props: any) {
       </CarouselItem>
     );
   });
+
   return (
     <section className="section-carousel">
       <Carousel
@@ -73,4 +78,5 @@ function Slider(props: any) {
     </section>
   )
 }
+
 export default Slider;

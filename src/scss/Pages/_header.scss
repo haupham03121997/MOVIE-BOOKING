@@ -19,8 +19,12 @@
               color: $mainColor;
             }
           }
+          .active{
+            color: $mainColor;
+          }
         }
       }
+     
     }
     .header__profile{
       cursor: pointer;
