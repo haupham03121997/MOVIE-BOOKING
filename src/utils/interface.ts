@@ -1,5 +1,5 @@
 export interface Movie  {
-  maPhim: boolean;
+  maPhim: number;
   tenPhim:string;
   biDanh:string;
   trailer:string;
@@ -7,5 +7,25 @@ export interface Movie  {
   moTa:string;
   maNhom:string;
   ngayKhoiChieu:string;
-  danhGia: boolean;
+  danhGia: number;
  }
+
+export interface lichChieuPhim {
+  giaVe: number;
+  maLichChieu: string;
+  maRap: string;
+  ngayChieuGioChieu: string;
+  tenRap: string;
+  thoiLuong: number;
+}
+
+export interface textDivHomeTool {
+   txtFilm : string;
+   txtCinema: string;
+   txtDate: string;
+   txtScreenings: string;
+ }
+export interface ReSize {
+  width: string,
+  height: string
+}

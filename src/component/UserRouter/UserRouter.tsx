@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom';
 
 export const UserRouter = (props: any) => {
   const { component: Component, ...rest } = props;
+
   return (
     <Route {...rest}
       render={
@@ -23,7 +24,6 @@ export const UserRouter = (props: any) => {
 }
 
 export const PrivateRouter = (props: any) => {
-  debugger
   const { component: Component, ...rest } = props;
   const userLogin = JSON.parse(localStorage.getItem('userLogin') || '{}');
 
@@ -32,7 +32,7 @@ export const PrivateRouter = (props: any) => {
       render={
         routerProps => {
           return (
-            userLogin.maLoaiNguoiDung === "QuanTri" ? <Component {...routerProps} />
+            userLogin.maLoaiNguoiDung === 'QuanTri' ? <Component {...routerProps} />
               : <Redirect to='/login' />
           )
         }

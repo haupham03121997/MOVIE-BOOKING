@@ -1,0 +1,76 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-async-promise-executor": 0,
+    "no-case-declarations": 0,
+    "no-undef": 0,
+    "no-unused-vars": 0,
+    "react/prop-types": 0,
+    "no-console": 0,
+    "react/sort-comp": 2,
+    "react/no-string-refs": 0,
+    "indent": [
+      "error",
+      2
+    ],
+    "react/jsx-key": 0,
+    "react/no-unescaped-entities" : 0,
+    "quotes": ["error", "single"],
+    "lines-between-class-members":  ["error", "always"],
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": [
+                    "block",
+                    "block-like",
+                    "cjs-export",
+                    "class",
+                    "const",
+                    "export",
+                    "import",
+                    "let",
+                    "var"
+                ]
+            },
+            {
+                "blankLine": "always",
+                "prev": [
+                    "block",
+                    "block-like",
+                    "cjs-export",
+                    "class",
+                    "const",
+                    "export",
+                    "import",
+                    "let",
+                    "var"
+                ],
+                "next": "*"
+            },
+            {
+                "blankLine": "never",
+                "prev": ["const", "let", "var"],
+                "next": ["const", "let", "var"]
+            },
+            { "blankLine": "any", "prev": ["export", "import"], "next": ["export", "import"] }
+        ]
+  }
+
+}

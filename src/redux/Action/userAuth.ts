@@ -1,8 +1,8 @@
-import apiServices from "../../apiServices/apiServices";
+import apiServices from '../../apiServices/apiServices';
 import axios from '../../utils/apiAxios';
-import { Dispatch } from "redux";
-import * as TYPE from "../Constant/type";
-export const userLogin = (values: object) => {
+import { Dispatch } from 'redux';
+import * as TYPE from '../Constant/type';
+export const userLogin = (values: any) => {
   return (dispatch: Dispatch) => {
     dispatch({
       type: TYPE.USER_LOGIN_REQUEST,
@@ -14,19 +14,20 @@ export const userLogin = (values: object) => {
           type: TYPE.USER_LOGIN_SUCCESS,
           payload: response.data,
         });
-        localStorage.setItem("userLogin", JSON.stringify(response.data));
-        console.log("response" , response);
-        
+        localStorage.setItem('userLogin', JSON.stringify(response.data));
+        console.log('response' , response);
       })
       .catch((error) => {
+        
         dispatch({
           type: TYPE.USER_LOGIN_FAILED,
+          payload : error
         });
       });
   };
 };
 
-export const userRegister = (value : object)=>{
+export const userRegister = (value : any)=>{
   return(dispatch : Dispatch)=>{
     dispatch({
       type : TYPE.USER_REGISTER_REQUEST
@@ -42,11 +43,11 @@ export const userRegister = (value : object)=>{
     //     type : TYPE.USER_REGISTER_FAILED
     //   })
     // })
-    axios.post("/api/QuanLyNguoiDung/DangKy" , value).then((res)=>{
-      console.log("RES_ " ,res);
+    axios.post('/api/QuanLyNguoiDung/DangKy' , value).then((res)=>{
+      console.log('RES_ ' ,res);
       
     }).catch((err)=>{
-      console.log("ERROR" , err);
+      console.log('ERROR' , err);
       
     })
 

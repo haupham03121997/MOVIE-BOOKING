@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field, } from 'formik';
 import { useDispatch } from 'react-redux';
 import { userRegister } from '../../../redux/Action/userAuth';
 
@@ -12,6 +12,7 @@ interface InitialValue {
   maLoaiNguoiDung: string;
   hoTen: string;
 }
+
 export default function Register() {
   const dispatch = useDispatch();
   const hanldeSubmit = (value: InitialValue) => {
@@ -19,6 +20,7 @@ export default function Register() {
     
     dispatch(userRegister(value));
   }
+
   return (
     <div className="section-register">
       <div className="logo-register" >
@@ -28,15 +30,15 @@ export default function Register() {
         Đăng ký thành viên
       </div>
       <Formik initialValues={{
-        taiKhoan: "",
-        matKhau: "",
-        email: "",
-        soDt: "",
-        maNhom: "GP01",
-        maLoaiNguoiDung: "KhachHang",
-        hoTen: "",
+        taiKhoan: '',
+        matKhau: '',
+        email: '',
+        soDt: '',
+        maNhom: 'GP01',
+        maLoaiNguoiDung: 'KhachHang',
+        hoTen: '',
       }}
-        onSubmit={hanldeSubmit}
+      onSubmit={hanldeSubmit}
       >
         {props => (
           <Form>

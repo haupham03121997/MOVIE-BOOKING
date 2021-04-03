@@ -1,5 +1,5 @@
 .section-hometools {
-  z-index: 99999;
+  z-index: 999;
   position: relative;
   cursor: pointer;
   font-weight: 900;
@@ -27,17 +27,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        p{
+        p {
           height: 20px;
           width: 100%;
           padding: 0 10px;
           margin-top: 1rem;
           align-items: center;
-          white-space: nowrap; 
+          white-space: nowrap;
           overflow: hidden;
-          text-overflow: ellipsis; 
+          text-overflow: ellipsis;
         }
- 
+
         padding: 20px;
         transform: translateY(-50%);
         padding: 5%;
@@ -97,21 +97,31 @@
             background-color: #60c5ef;
           }
         }
-      }
-      #style-1::-webkit-scrollbar {
-        width: 6px;
-        background-color: #f5f5f5;
-      }
-      #style-1::-webkit-scrollbar-thumb {
-        background-color: rgb(155, 153, 153);
-        border-radius: 10px;
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: #f5f5f5;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: rgb(155, 153, 153);
+          border-radius: 10px;
+        }
+        // &:hover{
+        //   &::-webkit-scrollbar {
+        //     width: 6px;
+        //     background-color: #f5f5f5;
+        //   }
+        //   &::-webkit-scrollbar-thumb {
+        //     background-color: rgb(155, 153, 153);
+        //     border-radius: 10px;
+        //   }
+        // }
       }
     }
+
     &__cinema {
       width: calc(70% / 4);
       height: 100%;
       position: relative;
-
       .cinema {
         position: absolute;
         top: 50%;
@@ -121,21 +131,21 @@
         align-items: center;
         transform: translateY(-50%);
         justify-content: space-between;
-        p{
+        p {
           height: 20px;
           width: 100%;
           padding: 0 10px;
           margin-top: 1rem;
           align-items: center;
-          white-space: nowrap; 
+          white-space: nowrap;
           overflow: hidden;
-          text-overflow: ellipsis; 
+          text-overflow: ellipsis;
         }
-        img{
+        img {
           width: 10px;
           height: 5.45px;
         }
-    
+
         padding: 7%;
         &::after {
           content: "";
@@ -223,6 +233,7 @@
         justify-content: space-between;
         transform: translateY(-50%);
         padding: 5%;
+
         &::after {
           content: "";
           position: absolute;
@@ -232,6 +243,39 @@
           height: 35px;
           border-right: 1px solid #fff;
           border-right-color: rgba(219, 214, 214, 0.88);
+        }
+      }
+      .listMovieDate_hide {
+        display: none;
+      }
+      .listMovieDate_show {
+        position: absolute;
+        top: 80%;
+        left: 0;
+        background-color: #fff;
+        min-width: 170px;
+        max-height: 200px;    
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        border-radius: 5px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: #f5f5f5;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: rgb(155, 153, 153);
+          border-radius: 10px;
+        }
+        &__system {
+          max-width: 250px;
+          min-width: 170px;
+          transition: all 0.5s;
+          font-size: 13px;
+          &:hover {
+            background-color: #60c5ef;
+          }
         }
       }
     }
@@ -264,6 +308,26 @@
     &__ticker {
       width: calc(70% / 4);
       height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: -webkit-box; 
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex; 
+      .buy-ticker {
+        padding: 10px 20px;
+        background: $colorGradient;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .not-buy-ticker {
+        @extend .buy-ticker;
+        background: #4a4a4a;
+      }
     }
   }
 }

@@ -1,52 +1,71 @@
 import {
   GET_ALL_CENIMA_HOMETOOL_SUCCESS,
   GET_ALL_CINEMA_DAY,
-} from "../Constant/type";
+  GET_ALL_CENIMA_SYSTEM_SUCCESS,
+  GET_ALL_INFO_CINEMA_SUCCESS,
+  GET_ALL_SHOW_TIME_CINEMA_SUCCESS
+} from '../Constant/type';
+
+// import { lichChieuPhim } from '../../utils/interface'
 const initialState = {
   listCinema: [],
   listDate: [],
+  listCinemaSymtem : [],
+  listInfoCinemaSystem : [],
+  listShowtimeCenimaSytem : []
 };
+
 
 export const getAllCenimaSystemReducer = (
   state = initialState,
   action: any
 ) => {
   switch (action.type) {
-    case GET_ALL_CENIMA_HOMETOOL_SUCCESS:
-      return {
-        ...state,
-        listCinema: action.payload,
-      };
-    case GET_ALL_CINEMA_DAY:
-      const newData = [...state.listCinema];
-      console.log("NEW_DATA", action.payload);
-      console.log("NEW_DATA", newData);
-      //  const hihi =  newData.map((rapchieu: any) => {
-      //     return rapchieu.cumRapChieu?.find((item : any) => item.maCumRap === action.payload)
-      //     ?.lichChieuPhim?.map((rap : any) => rap.ngayChieuGioChieu.substring(0, 10));
-      //     if (lichChieuTheoRap) {
-      //       const lichChieuTheoRapSet = [new Set(lichChieuTheoRap)];
-      //         lichChieuTheoRapSet.map(day => console.log("day " , day));
-      //     }
-      //   });
+  case GET_ALL_CENIMA_HOMETOOL_SUCCESS:
+    return {
+      ...state,
+      listCinema: action.payload,
+    };
 
-      const rapChieu = newData.map((movie: any) => {
-        const gioChieuPhim= movie.cumRapChieu.find(
-          (giochieu: any) => giochieu.maCumRap === action.payload
-        )?.lichChieuPhim?.map((rap : any ) => rap.ngayChieuGioChieu);
-        return gioChieuPhim;
-      });
+  case GET_ALL_CINEMA_DAY:{
+    const newData = [...state.listCinema];
+    const data: Array<any> = [];
 
-    
-      console.log("RAPCHIEU__" , rapChieu);
-      
+    newData.map((movie: any) => {
+      return movie.cumRapChieu
+        .find((giochieu: any) => giochieu.maCumRap === action.payload)
+        ?.lichChieuPhim?.map((lichChieuPhim: any) =>
+          data.push(lichChieuPhim.ngayChieuGioChieu)
+        );
+    });
+    return {
+      ...state,
+      listDate: data,
+    };
+  }
 
-      return {
-        ...state,
-        listDate: newData,
-      };
+  case GET_ALL_CENIMA_SYSTEM_SUCCESS: {
+    return {
+      ...state,
+      listCinemaSymtem : action.payload
+    }
+  }
 
-    default:
-      return { ...state };
+  case GET_ALL_INFO_CINEMA_SUCCESS : {
+    return {
+      ...state,
+      listInfoCinemaSystem : action.payload
+    }
+  }
+  
+  case GET_ALL_SHOW_TIME_CINEMA_SUCCESS: {
+    return {
+      ...state,
+      listShowtimeCenimaSytem: action.payload
+    }
+  }
+
+  default:
+    return { ...state };
   }
 };
