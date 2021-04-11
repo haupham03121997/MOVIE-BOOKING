@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.scss'
-import apiServices from '../../../apiServices/apiServices';
 import { getDetailMovie } from '../../../redux/Action/getDetailMovie'
 import get from 'lodash/get'
 import { useDispatch, useSelector } from 'react-redux'
