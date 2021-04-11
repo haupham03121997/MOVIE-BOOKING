@@ -15,7 +15,6 @@ export const userLogin = (values: any) => {
           payload: response.data,
         });
         localStorage.setItem('userLogin', JSON.stringify(response.data));
-        console.log('response' , response);
       })
       .catch((error) => {
         

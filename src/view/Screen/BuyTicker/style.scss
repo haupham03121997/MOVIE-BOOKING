@@ -1,0 +1,277 @@
+.buy-ticker {
+  .title {
+    height: 70px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    div {
+      color: red;
+      text-transform: uppercase;
+      span {
+        margin-right: 5px;
+      }
+    }
+  }
+  .book-chair {
+    .ant-col-2 {
+      overflow: hidden;
+      height: 90vh;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  .topContent {
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      display: flex;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+    }
+  }
+  .screen {
+    text-align: center;
+  }
+  .listSeat {
+    display: flex;
+    .dayGhe {
+      width: 20%;
+      text-align: right;
+    }
+    &__Content {
+      width: 80%;
+      height: 400px;
+      margin: 0 auto;
+      text-align: center;
+      .loi-di {
+        padding: 20px 0;
+        height: 30px;
+      }
+      .seat-row {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        span {
+          margin-right: 40px;
+          font-size: 18px;
+          width: 20px;
+          height: 30px;
+        }
+        .chair-normal {
+          position: relative;
+          background-color: #3e515d;
+          width: 30px;
+          height: 25px;
+          border-radius: 0 0 8px 8px;
+          display: inline-block;
+          margin-right: 10px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: -15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 23px;
+            height: 25px;
+            border-radius: 4px 4px 6px 6px;
+            border: 2px solid #fff;
+            background-color: #3e515d;
+          }
+        }
+        .chair-selected {
+          position: relative;
+          background-color: green;
+          width: 30px;
+          height: 25px;
+          border-radius: 0 0 8px 8px;
+          display: inline-block;
+          margin-right: 10px;
+          &::before {
+            content: "v";
+            color: white;
+            position: absolute;
+            top: -15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 23px;
+            height: 25px;
+            border-radius: 4px 4px 6px 6px;
+            border: 2px solid #fff;
+            background-color: green;
+          }
+        }
+      }
+      .chair-vip {
+        position: relative;
+        background-color: #f7b500;
+        width: 30px;
+        height: 25px;
+        border-radius: 0 0 8px 8px;
+        display: inline-block;
+        margin-right: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 23px;
+          height: 25px;
+          border-radius: 4px 4px 6px 6px;
+          border: 2px solid #fff;
+          background-color: #f7b500;
+        }
+      }
+      .chair-booked {
+        position: relative;
+        background-color: #e7eaec;
+        width: 30px;
+        height: 25px;
+        border-radius: 0 0 8px 8px;
+        display: inline-block;
+        margin-right: 10px;
+        &::before {
+          content: "X";
+          position: absolute;
+          top: -15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 23px;
+          height: 25px;
+          border-radius: 4px 4px 6px 6px;
+          border: 2px solid #fff;
+          background-color: #e7eaec;
+        }
+      }
+      .chair-doube {
+        position: relative;
+        background-color: #b03550;
+        width: 60px;
+        height: 25px;
+        border-radius: 0 0 8px 8px;
+        display: inline-block;
+        margin-right: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 55px;
+          height: 25px;
+          border-radius: 4px 4px 6px 6px;
+          border: 2px solid #fff;
+          background-color: #b03550;
+        }
+      }
+    }
+    .note {
+      width: 60%;
+      padding-top: 30px;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      .chair-normal-note {
+        position: relative;
+        background-color: #3e515d;
+        width: 15px;
+        height: 13px;
+        border-radius: 0 0 8px 8px;
+        display: inline-block;
+        margin-right: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 12px;
+          height: 13px;
+          border-radius: 4px 4px 6px 6px;
+          border: 1px solid #fff;
+          background-color: #3e515d;
+        }
+      }
+      .chair-vip-note {
+        position: relative;
+        background-color: #f7b500;
+        width: 15px;
+        height: 13px;
+        border-radius: 0 0 8px 8px;
+        display: inline-block;
+        margin-right: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 12px;
+          height: 13px;
+          border-radius: 4px 4px 6px 6px;
+          border: 1px solid #fff;
+          background-color: #f7b500;
+        }
+      }
+      .chair-selected-note {
+        position: relative;
+        background-color: green;
+        width: 15px;
+        height: 13px;
+        border-radius: 0 0 8px 8px;
+        display: inline-block;
+        margin-right: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 12px;
+          height: 13px;
+          border-radius: 4px 4px 6px 6px;
+          border: 1px solid #fff;
+          background-color: green;
+        }
+      }
+      .chair-booked-note {
+        position: relative;
+        background-color: #e7eaec;
+        width: 15px;
+        height: 13px;
+        border-radius: 0 0 8px 8px;
+        display: inline-block;
+        margin-right: 10px;
+        &::before {
+          content: "X";
+          font-size: 9px;
+          position: absolute;
+          top: -15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 12px;
+          height: 13px;
+          border-radius: 4px 4px 6px 6px;
+          border: 1px solid #fff;
+          background-color: #e7eaec;
+        }
+      }
+    }
+    .note-text {
+      width: 60%;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-around;
+      & > div {
+        margin-top: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+}

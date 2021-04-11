@@ -30,10 +30,14 @@ static Login =(value : any ): Promise<any>=>{
     return axiosClient.get(`api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${value}`)
   }
 
-
   static MovieDetail = ( id : string) : Promise<any>=>{
     return axiosClient.get(`/api/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`)
   }
+
+  static GetTickerRoom = (idShowTimes : string) : Promise<any>=>{
+    return axiosClient.get(`/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${idShowTimes}`)
+  }
+
 }
 
 export default apiSevices;

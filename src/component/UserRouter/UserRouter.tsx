@@ -40,3 +40,17 @@ export const PrivateRouter = (props: any) => {
     />
   )
 }
+export const CheckoutRoter = (props: any) => {
+  const { component: Component, ...rest } = props;
+
+  return (
+    <Route {...rest}
+      render={
+        routerProps => {
+          return <Component {...routerProps} />
+        }
+      }
+    />
+
+  )
+}

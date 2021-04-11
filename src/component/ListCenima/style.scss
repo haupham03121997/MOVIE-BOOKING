@@ -1,0 +1,86 @@
+@import "../../scss/style.scss";
+.section-cinema-address-detail {
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  .ant-tabs-content-holder {
+    width: 800px;
+  }
+  .ant-tabs-nav-wrap {
+    padding: 0 20px;
+  }
+  .ant-col-md-8 {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-top: 20px;
+    // border-right: 1px dotted red;
+  }
+  .ant-col-md-16 {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-top: 20px;
+    padding-left: 5px;
+    border-left: 2px dotted #eee;
+  }
+  .address-CGV {
+    padding: 0 10px;
+    min-height: 100px;
+
+    &__item {
+      display: flex;
+      padding-top: 10px;
+      opacity: 0.2;
+      cursor: pointer;
+      &.active {
+        opacity: 1;
+      }
+      img {
+        width: 45px;
+        height: 45px;
+      }
+      .CGV__detail {
+        margin-left: 10px;
+        .CGV_name {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  .CGV__movieInfo {
+    &__item {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      .movie-green {
+        @include Btn($green, $white, $fs-5, 0, 4px);
+        font-weight: 800;
+        padding: 5px 10px;
+      }
+      .movie-orange {
+        @include Btn($orange, $white, $fs-5, 0, 4px);
+        font-weight: 800;
+        padding: 5px 8px;
+      }
+      .show-time {
+        width: 65%;
+        min-height: 100px;
+        &-movie {
+          cursor: pointer;
+          padding: 5px 15px;
+          border: 1px solid green;
+          color: green;
+          margin-left: 10px;
+          display: inline-block;
+          margin-top: 5px;
+        }
+      }
+    }
+    .movieInfo__detail {
+      p:nth-child(2) {
+        color: £eee;
+        font-size: 12px;
+      }
+    }
+  }
+}

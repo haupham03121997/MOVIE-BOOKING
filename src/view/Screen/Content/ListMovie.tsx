@@ -6,15 +6,26 @@ import { ListMovieItem } from './ListMovieItem';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Loading from '../../../component/Loading'
 
 function ListMovie() {
   const dispatch = useDispatch();
+
 
   React.useEffect(() => {
     dispatch(getAllMovieAction())
   }, [])
 
-  const { listMovie } = useSelector((state: any) => state.GetListMovieReducer);
+
+
+  const { listMovie, loading } = useSelector((state: any) => state.GetListMovieReducer);
+
+
+
+  if (loading) {
+    return <Loading />
+  }
+
   const settings = {
     infinite: true,
     nav: true,
@@ -55,11 +66,11 @@ function ListMovie() {
   return (
 
     <Slider {...settings}>
-      {listMovie && listMovie.map((movie: Movie) => {
+      {listMovie && listMovie.map((movie: Movie, index: number) => {
         return (
-          <div className="item-phim__container">
+          <div className="item-phim__container" key={index}>
             <div className="item-phim__container__content">
-              <ListMovieItem movie={movie}  />
+              <ListMovieItem movie={movie} />
             </div>
           </div>
         )

@@ -4,10 +4,21 @@ import get from 'lodash/get';
 
 function Header() {
   const history = useHistory();
-  const getHistory = get(history , 'location.hash', '')
-  
+  const getHistory = get(history, 'location.hash', '')
+  const [isScroll, setIsScroll] = React.useState<boolean>(false)
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 40) {
+      setIsScroll(true)
+    } else {
+      setIsScroll(false)
+    }
+  })
+
+
+
   return (
-    <section className="header">
+    <section className="header-scroll">
       <nav className="navbar navbar--custom navbar-expand-md">
         <Link className="navbar-brand" to="/">
           <img src="/images/logo.png" alt="logo" />
@@ -34,7 +45,7 @@ function Header() {
           </ul>
           <div className="header__profile">
             <div className="header__profile__left" onClick={() => history.push('/login')}>
-              <img src="./images/avatar.png" alt="profile" />
+              <img src="/images/avatar.png" alt="profile" />
               <span className="ml-1 mt-2">Đăng Nhập</span>
             </div>
             <div className="header__profile__right" >

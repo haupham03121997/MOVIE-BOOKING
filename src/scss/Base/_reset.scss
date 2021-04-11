@@ -10,7 +10,12 @@
 body,
 html {
   font-family: 'Roboto', sans-serif;
+height: 100%;
+  width: 100%;
 
+}
+body.loading.layer{
+  overflow: hidden;
 }
 ol,
 ul {

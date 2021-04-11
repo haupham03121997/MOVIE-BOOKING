@@ -6,9 +6,13 @@ import get from 'lodash/get'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Tabs } from 'antd'
 import ListCenima from '../../../component/ListCenima'
+import { InfoFilm } from './InfoFilm';
+import { formatDateMoment } from '../../../common/function';
+import Loading from '../../../component/Loading'
 
 const { TabPane } = Tabs;
 const MovieDetail: React.FC = (props: any) => {
+
   const dispatch = useDispatch()
 
   React.useEffect(() => {
@@ -18,33 +22,32 @@ const MovieDetail: React.FC = (props: any) => {
   }, [])
 
   const { movieDetail, loading } = useSelector((state: any) => state.GetMovieDetail)
-  const Onchange = (value : string)=>{
-    console.log('Value',value);
-    
-  }
 
+  if (loading) {
+    return <Loading />
+  }
 
   return (
     <section className="movie-detail" >
       <div className="style-blur">
-        <img src="https://picsum.photos/200/300" alt="2" />
+        <img src={movieDetail ? movieDetail.hinhAnh : ''} alt={movieDetail ? movieDetail.biDanh : ''} />
       </div>
       <div className="style-layer">
 
       </div>
- 
+
       <div className="movie-detail__top">
         <Row>
           <Col span="6" >
-            <img style={{ height: '100%' }} src="https://picsum.photos/200" alt="1" />
+            <img src={movieDetail ? movieDetail.hinhAnh : ''} alt={movieDetail ? movieDetail.biDanh : ''} />
           </Col>
           <Col span='18'>
             <div className="movie-detail__title">
               <div className="movie-detail__title--release">
-                26.03.2021
+                {movieDetail && formatDateMoment(movieDetail.ngayKhoiChieu, 'time', 'DD/MM/YYYY')}
               </div>
               <div className="movie-detail__title--name">
-                <span className="nameFilm-orange">C16</span> Godzilla vs. Kong
+                <span className="nameFilm-orange">C16</span> {movieDetail && movieDetail.tenPhim}
               </div>
 
               <div className="movie-detail__title__time">
@@ -58,22 +61,18 @@ const MovieDetail: React.FC = (props: any) => {
         </Row>
       </div>
       <div className="movie-detail__bottom">
-        {/* <Row>
-          <Col span='24'>
-            <Tabs>
-              <TabPane tab="tab 1" key="1">
-              Content of Tab Pane 1
-              </TabPane>
-              <TabPane tab="tab 2" key="2">
-              Content of Tab Pane 2
-              </TabPane>
-              <TabPane tab="tab 3" key="3">
-              Content of Tab Pane 3
-              </TabPane>
-            </Tabs>
-          </Col>
-        </Row> */}
-        <ListCenima Onchange={Onchange} id={ get(props, 'match.params.id', '')} />
+        <Tabs defaultActiveKey='1' centered>
+          <TabPane tab="Lịch chiếu" key='1'>
+            <ListCenima movieDetail={movieDetail} id={get(props, 'match.params.id', '')} />
+          </TabPane>
+          <TabPane tab='Thông tin' key='2'>
+            <InfoFilm info={movieDetail} />
+          </TabPane>
+          <TabPane tab='Đánh giá' key='3'>
+
+          </TabPane>
+        </Tabs>
+
       </div>
 
 

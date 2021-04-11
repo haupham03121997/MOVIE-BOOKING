@@ -1,6 +1,6 @@
 @import "../../../scss/helpers/variable";
 @import "../../../scss/helpers/mixin";
-.section-cinema-address {
+.section-cinema-address{
   width: 75%;
   margin: 0 auto;
   padding-bottom: 30px;
@@ -68,7 +68,8 @@
         max-width: 210px;
         min-height: 80px;
         display: block;
-        .CGV_chitiet:hover {
+      
+        .CGV_chitiet {
           color: red;
         }
       }

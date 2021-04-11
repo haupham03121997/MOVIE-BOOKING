@@ -31,7 +31,7 @@ function RapAddressInfo(props: any) {
   const renderFilm = () => {
     return item.map((item: any, index: number) => {
       return (
-        <li className="CGV__movieInfo__item px-5">
+        <li className="CGV__movieInfo__item px-5" key={index}>
           <div className="d-flex mt-2">
             <img
               src={item.hinhAnh}
@@ -55,7 +55,7 @@ function RapAddressInfo(props: any) {
 
   return (
     <ul id="style-3" className="CGV__movieInfo scrollbar">
-      {/* {item.length ? renderFilm() : 'Không có thông tin.'} */}
+      {item.length ? renderFilm() : 'Không có thông tin.'}
     </ul>
   )
 }

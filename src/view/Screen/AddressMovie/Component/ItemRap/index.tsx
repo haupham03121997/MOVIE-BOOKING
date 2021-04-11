@@ -14,10 +14,11 @@ function ItemRap( props : any) {
       setIsActive(index)
     }
 
+      
     return(
       item.map((it: any,   index : number) =>{
         return (
-          <li className={ isActive === index ? 'address-CGV__item active' : 'address-CGV__item'} onClick={handleClick(index , it.maCumRap)}>
+          <li key={index} className={ isActive === index ? 'address-CGV__item active' : 'address-CGV__item'} onClick={handleClick(index , it.maCumRap)}>
             <img src="./images/aeon-TanPhu.jpg" alt="12"  />
             <div className="CGV__detail ">
               <p className="CGV_name mb-0">

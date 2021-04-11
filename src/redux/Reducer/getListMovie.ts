@@ -15,6 +15,12 @@ const initialState :InitialState  = {
 export const GetListMovieReducer  = (state = initialState , action : any)=>{  
 
   switch (action.type) {
+  case 'GET_ALL_MOVIE_REQUEST':{
+    return {
+      ...state,
+    }
+  }
+
   case 'GET_ALL_MOVIE_SUCCESS': {
     return{
       ...state , listMovie : action.payload , loading : false , error : false

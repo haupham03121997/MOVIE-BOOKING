@@ -15,7 +15,7 @@ const rederRating = (rating)=>{
     arr = [0, 1 ]
   }
 
-  return arr.map(it => <img src="/images/star1.png" alt="star" />)
+  return arr.map((it , index) => <img key={index} src="/images/star1.png" alt="star" />)
 }
 
 

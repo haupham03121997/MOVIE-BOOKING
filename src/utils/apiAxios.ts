@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 
 const { REACT_APP_API_HOST } = process.env;
@@ -6,7 +7,8 @@ const axiosClient = axios.create({
 });
 
 axiosClient.interceptors.request.use((config) => {
-  const userInfo = 1;
+  
+  const userInfo = localStorage.getItem('userLogin') && JSON.parse(localStorage.getItem('userLogin') || '')
 
   if (config) {
     config.headers.Authorization = `Baear ${userInfo}`;

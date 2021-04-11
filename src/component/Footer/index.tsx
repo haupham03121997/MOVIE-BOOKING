@@ -29,46 +29,46 @@ function Footer() {
                 <h4> ĐỐI TÁC</h4>
                 <div className="row">
                   <div className="col-12 pl-0">
-                    <img src="./images/bhd.png" alt="bhd"/>
-                    <img src="./images/bhd.png" alt="bhd"/>
-                    <img src="./images/galaxy.png" alt="galaxy"/>
-                    <img src="./images/lotte.png" alt="lotte"/>
-                    <img src="./images/bhd.png" alt="bhd"/>
+                    <img src="/images/bhd.png" alt="bhd" />
+                    <img src="/images/bhd.png" alt="bhd" />
+                    <img src="/images/galaxy.png" alt="galaxy" />
+                    <img src="/images/lotte.png" alt="lotte" />
+                    <img src="/images/bhd.png" alt="bhd" />
                   </div>
                 </div>
                 <div className="row  mt-3">
                   <div className="col-12 pl-0">
-                    <img src="./images/bhd.png" alt="bhd"/>
-                    <img src="./images/bhd.png" alt="bhd"/>
-                    <img src="./images/galaxy.png" alt="galaxy"/>
-                    <img src="./images/lotte.png" alt="lotte"/>
-                    <img src="./images/bhd.png" alt="bhd"/>
-              
+                    <img src="/images/bhd.png" alt="bhd" />
+                    <img src="/images/bhd.png" alt="bhd" />
+                    <img src="/images/galaxy.png" alt="galaxy" />
+                    <img src="/images/lotte.png" alt="lotte" />
+                    <img src="/images/bhd.png" alt="bhd" />
+
                   </div>
                 </div>
                 <div className="row  mt-3">
                   <div className="col-12 pl-0">
-                    <img src="./images/bhd.png" alt="bhd"/>
-                    <img src="./images/bhd.png" alt="bhd"/>
-                    <img src="./images/galaxy.png" alt="galaxy"/>
-                    <img src="./images/lotte.png" alt="lotte"/>
-                    <img src="./images/bhd.png" alt="bhd"/>
+                    <img src="./images/bhd.png" alt="bhd" />
+                    <img src="./images/bhd.png" alt="bhd" />
+                    <img src="./images/galaxy.png" alt="galaxy" />
+                    <img src="./images/lotte.png" alt="lotte" />
+                    <img src="./images/bhd.png" alt="bhd" />
                   </div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-12 pl-0">
-                    <img src="./images/bhd.png" alt="bhd"/>
-                    <img src="./images/bhd.png" alt="bhd"/>
-                    <img src="./images/galaxy.png" alt="galaxy"/>
-                    <img src="./images/lotte.png" alt="lotte"/>
-                    <img src="./images/bhd.png" alt="bhd"/>
+                    <img src="./images/bhd.png" alt="bhd" />
+                    <img src="./images/bhd.png" alt="bhd" />
+                    <img src="./images/galaxy.png" alt="galaxy" />
+                    <img src="./images/lotte.png" alt="lotte" />
+                    <img src="./images/bhd.png" alt="bhd" />
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-2 footer__top-item">
               <h4>Mobile App</h4>
-              
+
               <p className="footer__item-title mb-0">
                 <i className="fab fa-apple mr-2" />
                 <i className="fab fa-android" />
@@ -77,10 +77,10 @@ function Footer() {
             <div className="col-2 footer__top-item">
               <h4>Mobile App</h4>
               <p className="footer__item-title mb-0">
-              
+
                 <i className="fab fa-apple mr-2" />
                 <i className="fab fa-android" />
-              
+
               </p>
             </div>
           </div>
@@ -88,7 +88,7 @@ function Footer() {
         <div className="footer__detail2">
           <div className="row mt-5 mt-sm-0 mt-md-0 pt-md-3">
             <div className="col-lg-1 col-md-12">
-              <img src="./images/zion-logo.jpg" alt ='zion'/>
+              <img src="./images/zion-logo.jpg" alt='zion' />
             </div>
             <div className="col-lg-9 col-md-12">
               <p>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</p>

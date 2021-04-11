@@ -29,3 +29,16 @@ export interface ReSize {
   width: string,
   height: string
 }
+
+export interface MovieDetail {
+  lichChieu : Array<any>,
+  maPhim : number,
+  tenPhim : string,
+  biDanh : string,
+  trailer :string,
+  hinhAnh: string,
+  moTa : string,
+  maNhom : string,
+  ngayKhoiChieu: string,
+  danhGia : number
+}
