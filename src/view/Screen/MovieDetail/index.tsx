@@ -22,8 +22,6 @@ const MovieDetail: React.FC = (props: any) => {
 
   const { movieDetail, loading } = useSelector((state: any) => state.GetMovieDetail)
 
-  console.log(123123);
-
   if (loading) {
     return <Loading />
   }
